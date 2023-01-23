@@ -89,8 +89,8 @@ START*/
 }
 
 body {
-  background-image: url(./img/bg-pattern-bottom.svg),
-    url(./img/bg-pattern-top.svg);
+  background-image: url(./img/bg-pattern-bottom[1].svg),
+    url(./img/bg-pattern-top[1].svg);
   background-repeat: no-repeat;
   background-position: -10% -120%, 120% 200%;
   background-color: var(--cl-primary-100);

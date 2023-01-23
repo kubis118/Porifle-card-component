@@ -1,0 +1,186 @@
+/*
+  1. Use a more-intuitive box-sizing model.
+*/
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+/*
+  2. Remove default margin
+*/
+* {
+  margin: 0;
+}
+/*
+  3. Allow percentage-based heights in the application
+*/
+html,
+body {
+  height: 100%;
+}
+/*
+  Typographic tweaks!
+  4. Add accessible line-height
+  5. Improve text rendering
+*/
+body {
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+/*
+  6. Improve media defaults
+*/
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+/*
+  7. Remove built-in form typography styles
+*/
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+/*
+  8. Avoid text overflows
+*/
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+}
+/*
+  9. Create a root stacking context
+*/
+#root,
+#__next {
+  isolation: isolate;
+}
+
+/*
+- Mobile: 375px
+- Desktop: 1440px
+START*/
+
+:root {
+  --cl-primary-100: hsl(185, 75%, 39%);
+  --cl-primary-200: hsl(229, 23%, 23%);
+  --cl-primary-300: hsl(227, 10%, 46%);
+
+  --cl-secondary-100: hsl(0, 0%, 59%);
+
+  --fs-primary: 18px;
+
+  --ff-primary: "Kumbh Sans", sans-serif;
+
+  --fw-normal: 400;
+  --fw-bold: 700;
+}
+
+body {
+  background-image: url(./img/bg-pattern-bottom[1].svg),
+    url(./img/bg-pattern-top[1].svg);
+  background-repeat: no-repeat;
+  background-position: -10% -120%, 120% 200%;
+  background-color: var(--cl-primary-100);
+  font-family: var(--ff-primary);
+}
+
+.container {
+  margin-top: 8rem;
+  background-color: white;
+  width: 90%;
+  margin-inline: auto;
+  border-radius: 0.8rem;
+  position: relative;
+}
+
+.top-img {
+  border-radius: 0.8rem 0.8rem 0 0;
+}
+
+.name-age {
+  display: flex;
+  margin-top: 3rem;
+  justify-content: center;
+}
+
+h1 {
+  display: inline-block;
+  font-size: var(--fs-primary);
+  padding-right: 0.7rem;
+  font-weight: var(--fw-bold);
+}
+
+.age {
+  font-size: var(--fs-primary);
+  color: var(--cl-primary-300);
+}
+
+.city {
+  display: flex;
+  justify-content: center;
+  color: var(--cl-primary-300);
+  font-size: 15px;
+  margin: 0.5rem 0 1.5rem 0;
+}
+
+.bottom-container {
+  border-top: 1px solid rgb(206, 206, 206);
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem 2.5rem 2rem 2.5rem;
+}
+
+.followers,
+.likes,
+.photos {
+  font-size: 22px;
+  font-weight: var(--fw-bold);
+}
+
+.followers-box,
+.likes-box,
+.photos-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.text {
+  font-size: 12px;
+  letter-spacing: 0.2em;
+  color: var(--cl-secondary-100);
+}
+
+.profile-img {
+  position: absolute;
+  border-radius: 50%;
+  border: 5px solid white;
+  top: 20%;
+  left: 35%;
+}
+
+@media (min-width: 1440px) {
+  body {
+    background-image: none;
+  }
+  .container {
+    width: 20%;
+  }
+
+  .name-age {
+    margin-top: 5rem;
+  }
+}
